@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
 apply from: '../shared_dependencies.gradle'
@@ -38,6 +37,10 @@ android {
 
     buildFeatures {
         viewBinding true
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     dynamicFeatures = [':favorite']
