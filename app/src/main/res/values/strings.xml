@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MyAnimeList KW</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_movie">Movie</string>
+    <string name="title_tv_show">TV Show</string>
+
+    <string name="title">Title</string>
+    <string name="plot_summary">Plot Summary</string>
+    <string name="genres">Genres</string>
+    <string name="release_time">Release Time</string>
+    <string name="other_name">Other Name</string>
+    <string name="status">Status</string>
+    <string name="number_episode">Number Episode</string>
+    <string name="tv_show_episode">TV Show Episodes</string>
+    <string name="watch_the_movie">Watch The Movie</string>
+    <string name="go_to_favorite_activity">Go To Favorite</string>
+    <string name="favorite_this">Favorite This</string>
+    <string name="unfavorite_this">Unfavorite This</string>
+    <string name="dataset_empty">Tidak ada data yang bisa ditampilkan tolong coba lagi</string>
+
+    <string name="text_other_name">Other Name: %s</string>
+    <string name="text_rank">Rank: %s</string>
+    <string name="text_score">Score: %s</string>
+    <string name="text_release">Release: %s</string>
+    <string name="text_premiered">Premiered: %s</string>
+    <string name="text_genres">Genres: %s</string>
+    <string name="text_status">Status: %s</string>
+    <string name="text_number_episode">Number Episode: %s</string>
+    <string name="text_episode">Episode %s - </string>
+    <string name="example_of_plot_summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique senectus et netus. Nullam vehicula ipsum a arcu cursus vitae congue mauris. Enim sed faucibus turpis in eu mi. Nunc id cursus metus aliquam eleifend mi. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Id neque aliquam vestibulum morbi blandit cursus risus at. Proin fermentum leo vel orci porta non pulvinar neque. Etiam erat velit scelerisque in dictum non consectetur a erat. Urna id volutpat lacus laoreet non curabitur.</string>
+</resources>

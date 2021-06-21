@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Title</string>
+    <string name="scores">Scores</string>
+    <string name="rank">Rank</string>
+    <string name="release_time">Release Time</string>
+    <string name="number_episode">Number Episode</string>
+    <string name="tv_show_episode">TV Show Episodes</string>
+
+    <string name="text_rank">Rank: %s</string>
+    <string name="text_score">Score: %s</string>
+    <string name="text_release">Release: %s</string>
+    <string name="text_number_episode">Number Episode: %s</string>
+    <string name="text_episode">Episode %s - </string>
+</resources>
