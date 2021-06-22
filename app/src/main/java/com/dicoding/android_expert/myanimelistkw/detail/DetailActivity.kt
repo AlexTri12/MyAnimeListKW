@@ -46,9 +46,13 @@ class DetailActivity : AppCompatActivity() {
             viewModel.detailAnime?.observe(this, { anime ->
                 if (anime != null) {
                     when(anime) {
-                        is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
+                        is Resource.Loading -> {
+                            binding.progressBar.visibility = View.VISIBLE
+                            binding.scrollView.visibility = View.GONE
+                        }
                         is Resource.Success -> {
                             binding.progressBar.visibility = View.GONE
+                            binding.scrollView.visibility = View.VISIBLE
                             this.anime = anime.data
                             setUpDetailAnime()
                             isFavorite = anime.data?.isFavorite == true
