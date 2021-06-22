@@ -48,10 +48,12 @@ class DetailActivity : AppCompatActivity() {
                     when(anime) {
                         is Resource.Loading -> {
                             binding.progressBar.visibility = View.VISIBLE
+                            binding.errorAnimation.visibility = View.GONE
                             binding.scrollView.visibility = View.GONE
                         }
                         is Resource.Success -> {
                             binding.progressBar.visibility = View.GONE
+                            binding.errorAnimation.visibility = View.GONE
                             binding.scrollView.visibility = View.VISIBLE
                             this.anime = anime.data
                             setUpDetailAnime()
@@ -60,6 +62,8 @@ class DetailActivity : AppCompatActivity() {
                         }
                         is Resource.Error -> {
                             binding.progressBar.visibility = View.GONE
+                            binding.errorAnimation.visibility = View.VISIBLE
+                            binding.scrollView.visibility = View.GONE
                         }
                     }
                 }
@@ -108,6 +112,7 @@ class DetailActivity : AppCompatActivity() {
                     rvEpisodes.setHasFixedSize(true)
                     rvEpisodes.adapter = adapter
                 } else if (detailAnime.type == "Movie") {
+                    tvStatus.visibility = View.GONE
                     tvEpisodes.visibility = View.GONE
                     rvEpisodes.visibility = View.GONE
                     btnWatchMovie.visibility = View.VISIBLE

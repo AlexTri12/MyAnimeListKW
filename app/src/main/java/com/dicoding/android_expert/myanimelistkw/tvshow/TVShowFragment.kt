@@ -65,17 +65,17 @@ class TVShowFragment(private val fromActivity: String) : Fragment() {
                 when(animeList) {
                     is Resource.Loading -> {
                         binding.progressBar.visibility = View.VISIBLE
-                        binding.tvDatasetEmpty.visibility = View.GONE
+                        binding.datasetEmptyContainer.visibility = View.GONE
                     }
                     is Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
-                        binding.tvDatasetEmpty.visibility = View.GONE
+                        binding.datasetEmptyContainer.visibility = View.GONE
                         listAnimeAdapter.setAnimeList(animeList.data)
                         binding.rvTvShow.visibility = View.VISIBLE
                     }
                     is Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
-                        binding.tvDatasetEmpty.visibility = View.VISIBLE
+                        binding.datasetEmptyContainer.visibility = View.VISIBLE
                     }
                 }
             }
@@ -85,11 +85,12 @@ class TVShowFragment(private val fromActivity: String) : Fragment() {
     private fun getDataForFavoriteActivity() {
         viewModel.favoriteTVShowList.observe(viewLifecycleOwner, { animeList ->
             if (animeList.isNullOrEmpty()) {
-                binding.tvDatasetEmpty.visibility = View.GONE
-                binding.tvDatasetEmpty.visibility = View.VISIBLE
+                binding.progressBar.visibility = View.GONE
+                binding.datasetEmptyContainer.visibility = View.VISIBLE
+                listAnimeAdapter.setAnimeList(animeList)
             } else {
-                binding.tvDatasetEmpty.visibility = View.GONE
-                binding.tvDatasetEmpty.visibility = View.GONE
+                binding.progressBar.visibility = View.GONE
+                binding.datasetEmptyContainer.visibility = View.GONE
                 listAnimeAdapter.setAnimeList(animeList)
             }
         })
