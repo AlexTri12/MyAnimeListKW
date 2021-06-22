@@ -35,10 +35,6 @@ android {
         jvmTarget = '1.8'
     }
 
-    lintOptions {
-        abortOnError false
-    }
-
     buildFeatures {
         viewBinding true
     }
@@ -63,4 +59,8 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
     implementation "androidx.room:room-ktx:2.3.0"
     api "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+
+    // SQLCipher
+    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+    implementation "androidx.sqlite:sqlite-ktx:2.1.0"
 }

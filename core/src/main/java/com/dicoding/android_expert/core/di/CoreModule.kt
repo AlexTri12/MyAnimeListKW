@@ -8,6 +8,8 @@ import com.dicoding.android_expert.core.data.source.remote.RemoteDataSource
 import com.dicoding.android_expert.core.data.source.remote.network.ApiService
 import com.dicoding.android_expert.core.domain.repository.IMyAnimeListKWRepository
 import com.dicoding.android_expert.core.utils.AppExecutors
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -21,11 +23,16 @@ val databaseModule = module {
         get<MyAnimeListKWDatabase>().myAnimeListKWDao()
     }
     single {
+        val passPhrase: ByteArray = SQLiteDatabase.getBytes("MyAnimeListKW".toCharArray())
+        val factory = SupportFactory(passPhrase)
+
         Room.databaseBuilder(
             androidContext(),
             MyAnimeListKWDatabase::class.java,
             "MyAnimeListKW.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
+            .build()
     }
 }
 
