@@ -45,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@color/button_episode"
+                android:textIsSelectable="false"
                 app:layout_constraintStart_toEndOf="@id/shimmer_img_poster_container"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -56,6 +57,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/button_episode"
+                android:textIsSelectable="false"
                 app:layout_constraintStart_toStartOf="@id/shimmer_tv_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/shimmer_tv_name" />
@@ -67,6 +69,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/button_episode"
+                android:textIsSelectable="false"
                 app:layout_constraintStart_toStartOf="@id/shimmer_tv_genres"
                 app:layout_constraintEnd_toEndOf="@id/shimmer_tv_genres"
                 app:layout_constraintTop_toBottomOf="@id/shimmer_tv_genres" />
@@ -78,6 +81,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/button_episode"
+                android:textIsSelectable="false"
                 app:layout_constraintStart_toStartOf="@id/shimmer_tv_release"
                 app:layout_constraintEnd_toEndOf="@id/shimmer_tv_release"
                 app:layout_constraintTop_toBottomOf="@id/shimmer_tv_release" />
@@ -89,6 +93,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/button_episode"
+                android:textIsSelectable="false"
                 app:layout_constraintStart_toStartOf="@id/shimmer_tv_status"
                 app:layout_constraintEnd_toEndOf="@id/shimmer_tv_status"
                 app:layout_constraintTop_toBottomOf="@id/shimmer_tv_status" />
@@ -100,6 +105,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/button_episode"
+                android:textIsSelectable="false"
                 app:layout_constraintStart_toStartOf="@id/shimmer_tv_other_name"
                 app:layout_constraintEnd_toEndOf="@id/shimmer_tv_other_name"
                 app:layout_constraintTop_toBottomOf="@id/shimmer_tv_other_name" />
