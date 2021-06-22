@@ -29,13 +29,11 @@ class RemoteDataSource(
 
                 if (animes.isNotEmpty()) {
                     emit(ApiResponse.Success(response.topAnimes))
-                    Log.e("RemoteDataSource", response.topAnimes.toString())
                 } else {
                     emit(ApiResponse.Empty)
                 }
             } catch (e: Exception) {
                 emit(ApiResponse.Error(e.toString()))
-                Log.e("RemoteDataSource", e.toString())
             }
         }.flowOn(Dispatchers.IO)
     }
@@ -48,13 +46,11 @@ class RemoteDataSource(
 
                 if (animes.isNotEmpty()) {
                     emit(ApiResponse.Success(response.topAnimes))
-                    Log.d("RemoteDataSource", response.topAnimes.toString())
                 } else {
                     emit(ApiResponse.Empty)
                 }
             } catch (e: Exception) {
                 emit(ApiResponse.Error(e.toString()))
-                Log.e("RemoteDataSource", e.toString())
             }
         }.flowOn(Dispatchers.IO)
     }
@@ -62,12 +58,10 @@ class RemoteDataSource(
     suspend fun getDetailAnime(id: Int) : Flow<ApiResponse<DetailAnimeResponse>> {
         return flow {
             try {
-                Log.d("RemoteDataSource", "Anime with id $id")
                 val response = apiService.getAnimeDetail(id)
                 emit(ApiResponse.Success(response))
             } catch (e: Exception) {
                 emit(ApiResponse.Error(e.toString()))
-                Log.e("RemoteDataSource", e.toString())
             }
         }.flowOn(Dispatchers.IO)
     }

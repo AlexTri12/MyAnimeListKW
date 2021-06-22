@@ -40,7 +40,6 @@ class LocalDataSource(
         val animeId = anime.id
         val newState = !anime.isFavorite
 
-        Log.d("LocalDataSource", "Updating favorite anime $animeId and $newState")
         databaseDao.updateFavoriteListAnime(animeId, newState)
         databaseDao.updateFavoriteDetailAnime(animeId, newState)
     }
